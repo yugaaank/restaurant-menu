@@ -2,9 +2,6 @@
 
 A complete full-stack food delivery application built with React (Vite), Node.js (Express), and Supabase (PostgreSQL). Features include customer ordering, shopping cart management, order tracking, admin dashboard, and restaurant manager interface.
 
-![Food Delivery App Screenshot](https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80) 
-*(Demo Image)*
-
 ## 🚀 Features
 
 ### Customer Features
