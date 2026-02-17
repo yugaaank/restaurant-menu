@@ -1,0 +1,224 @@
+.order-success-page {
+    padding-bottom: 50px;
+}
+
+.success-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.success-header h1 {
+    color: #10B981;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.success-header p {
+    font-size: 1.2rem;
+    color: var(--muted);
+}
+
+/* Checkmark Animation */
+.check-animation {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke: #10B981;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke: #10B981;
+    stroke-width: 4;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.order-card {
+    margin-bottom: 30px;
+}
+
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.order-time {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.customer-info {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.customer-info .address {
+    color: var(--muted);
+}
+
+.customer-info .note {
+    font-style: italic;
+    background: var(--bg);
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.order-items-list {
+    margin-bottom: 15px;
+}
+
+.order-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-item-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    background-color: #eee;
+}
+
+.order-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.status-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.status-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.last-updated {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.progress-tracker::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #E5E7EB;
+    z-index: 1;
+}
+
+.step-item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.step-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #E5E7EB;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.step-item.completed .step-dot {
+    background: #10B981;
+}
+
+.step-item.current .step-dot {
+    background: var(--primary);
+    transform: scale(1.3);
+}
+
+.step-item.current .step-label {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.action-buttons {
+    text-align: center;
+}
+
+.track-order-input {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.track-order-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.track-order-input button {
+    padding: 10px 20px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}

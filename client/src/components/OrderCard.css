@@ -1,0 +1,112 @@
+.order-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-id {
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.order-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.order-details {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.order-info-row {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.info-label {
+    color: var(--text-muted);
+    margin-right: 5px;
+}
+
+.info-value {
+    font-weight: 500;
+}
+
+.order-items-list {
+    margin-top: 10px;
+    background-color: var(--bg);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+}
+
+.order-item-summary {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.item-qty {
+    font-weight: bold;
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.order-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.status-select {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Colorize select based on value is tricky in pure CSS without JS wrappers, 
+   but we can style the container or basic select */
+.status-select.pending {
+    background-color: #FFF3CD;
+}
+
+.status-select.confirmed {
+    background-color: #CFE2FF;
+}
+
+.status-select.preparing {
+    background-color: #FFE5D0;
+}
+
+.status-select.out_for_delivery {
+    background-color: #E8D5FF;
+}
+
+.status-select.delivered {
+    background-color: #D1E7DD;
+}
+
+.status-select.cancelled {
+    background-color: #F8D7DA;
+}

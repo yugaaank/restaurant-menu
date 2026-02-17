@@ -1,0 +1,125 @@
+.menu-item-card {
+    display: flex;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    transition: 0.2s;
+}
+
+.menu-item-card:hover {
+    box-shadow: var(--shadow);
+}
+
+.menu-item-card.unavailable {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.menu-item-img-container {
+    width: 120px;
+    height: 120px;
+    /* fixed square */
+    position: relative;
+    flex-shrink: 0;
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e6e6e6 0%, #ffffff 100%);
+}
+
+.unavailable-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.menu-item-details {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.menu-item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--secondary);
+}
+
+.menu-item-price {
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.menu-item-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.menu-item-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-qty-controls {
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.item-qty-controls button {
+    background: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.item-qty-controls button:hover {
+    background: #f0f0f0;
+}
+
+.item-qty-controls span {
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,123 @@
+.restaurant-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF9F43 100%);
+}
+
+.closed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-body {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary);
+}
+
+.badge {
+    background-color: #f0f0f0;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.card-address {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.status-dot {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-dot::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-dot.open {
+    color: var(--accent);
+}
+
+.status-dot.open::before {
+    background-color: var(--accent);
+}
+
+.status-dot.closed {
+    color: var(--danger);
+}
+
+.status-dot.closed::before {
+    background-color: var(--danger);
+}

@@ -1,0 +1,29 @@
+.status-pending {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.status-confirmed {
+    background-color: #DBEAFE;
+    color: #1E40AF;
+}
+
+.status-preparing {
+    background-color: #FFEDD5;
+    color: #9A3412;
+}
+
+.status-out_for_delivery {
+    background-color: #EDE9FE;
+    color: #5B21B6;
+}
+
+.status-delivered {
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+.status-cancelled {
+    background-color: #FEE2E2;
+    color: #991B1B;
+}

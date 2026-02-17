@@ -1,0 +1,146 @@
+.hero-section {
+    background: linear-gradient(135deg, var(--primary), #FF4500);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.search-wrapper {
+    max-width: 500px;
+    margin: auto;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: var(--shadow);
+    outline: none;
+}
+
+.cuisine-filters {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.filter-pill {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+    background: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.restaurant-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #eee;
+}
+
+.cuisine-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-tag.open {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.status-tag.closed {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    color: var(--muted);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
