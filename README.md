@@ -1,57 +1,59 @@
 <div align="center">
 
-# 🍽️ restaurant-menu
+# restaurant-menu
 
-**A restaurant menu web app with a Supabase-backed order layer.**
-
-[![Stack](https://img.shields.io/badge/stack-React%20%2B%20Supabase-8b5cf6?style=for-the-badge)](https://supabase.com)
-[![DB](https://img.shields.io/badge/db-Supabase-8b5cf6?style=for-the-badge)](SUPABASE_SETUP.md)
-[![PRs](https://img.shields.io/badge/PRs-welcome-8b5cf6?style=for-the-badge)](#contributing)
-
-</div>
-
----
-
-<div align="center">
-
-| | |
-|---|---|
-| 🎯 **Purpose** | Browse & order from a restaurant menu |
-| 🧩 **Stack** | React (client) · Node (server) · Supabase |
-| 🌑 **Theme** | Dark / rich |
-| 📦 **Status** | In development |
+[![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)](https://react.dev)
+[![Express](https://img.shields.io/badge/API-Express-000000?logo=express&logoColor=white)](#architecture)
+[![Supabase](https://img.shields.io/badge/db-Supabase-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
+[![License](https://img.shields.io/badge/license-MIT-8b5cf6)](#license)
 
 </div>
 
----
+`restaurant-menu` is a restaurant menu and ordering web app. A React (Vite)
+client talks to an Express API that persists menus, items, and orders in
+Supabase. A seed script populates the catalog so the app is runnable from a
+clean database.
 
-## ✨ Features
+## Why
 
-- 📋 **Menu UI** — clean client to browse dishes
-- 🗄️ **Supabase** persistence (setup in `SUPABASE_SETUP.md`)
-- 🔌 **Server** layer for orders / data
+The interesting part is the data boundary: the Express layer is a thin,
+layered API (routes → controllers → models) over Supabase's Postgres/SDK, so
+the client never touches the database directly and the schema lives in one
+place. `SUPABASE_SETUP.md` documents the tables and the wiring.
 
-## 🚀 Quick start
-
-```bash
-cp SUPABASE_SETUP.md ./ && follow its steps
-cd client && npm install && npm run dev
-cd ../server && npm install && npm run dev
-```
-
-## 📁 Structure
+## Architecture
 
 ```
 restaurant-menu/
-├── client/              # React front end
-├── server/              # API
-└── SUPABASE_SETUP.md    # db wiring
+├── client/              # Vite + React front end (src/, index.html)
+├── server/              # Express API
+│   ├── server.js        # app bootstrap
+│   ├── routes/          # HTTP route definitions
+│   ├── controllers/     # request handlers
+│   ├── models/          # Supabase-backed data access
+│   ├── config/          # env / client config
+│   └── seed.js          # populate catalog
+└── SUPABASE_SETUP.md    # schema + connection steps
 ```
 
-## 🤝 Contributing
+- **Server** — `express` + `@supabase/supabase-js` + `cors` + `dotenv`;
+  `npm run seed` fills the catalog from `seed.js`.
+- **Client** — Vite + React SPA in `client/src` calling the API.
 
-PRs welcome — match the dark/rich README style.
+## Getting started
 
-## 📜 License
+```bash
+# 1. database
+cp SUPABASE_SETUP.md ./ && follow it to create tables + keys
 
-MIT © Yugank Rathore
+# 2. server
+cd server && cp .env.example .env
+npm install && npm run seed && npm run dev
+
+# 3. client
+cd ../client && npm install && npm run dev
+```
+
+## License
+
+MIT
